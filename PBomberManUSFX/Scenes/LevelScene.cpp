@@ -15,9 +15,9 @@ LevelScene::LevelScene(GameManager* _gameManager, const unsigned int _stage, con
     : Scene(_gameManager), score(prevScore), stage(_stage)
 {
     //Trate de generar un menu al ingreso, donde se elija el tipo de juego
-   // int factoryGameType =  MenuScene::onMenuItemPress;
+    int factoryGameType =  MenuScene::onMenuItemPress; //no reconoce
 
-    int factoryGameType = 1;
+   // int factoryGameType = 1;
 
     if (factoryGameType == 0) {
         factory = new FactoryGameCartoon();

@@ -185,19 +185,19 @@ void MenuScene::onMenuItemSelect()
     }
 }
 
-//int MenuScene::onMenuItemPress()
-void MenuScene::onMenuItemPress()
+int MenuScene::onMenuItemPress()
+//void MenuScene::onMenuItemPress()
 {
 
-   // int tipoJuego;
+    int tipoJuego;
     switch(currentSelectedMenu)
     {
         case MenuItem::Start:
             // go to level scene
             gameManager->getSceneManager()->addScene("stage", std::make_shared<StageScene>(gameManager, 1, 0));
             gameManager->getSceneManager()->activateScene("stage");
-           // tipoJuego = 0;
-           // return tipoJuego;
+            tipoJuego = 0;
+            return tipoJuego;
           
             break;
       
@@ -205,25 +205,25 @@ void MenuScene::onMenuItemPress()
  
             gameManager->getSceneManager()->addScene("stage", std::make_shared<StageScene>(gameManager, 1, 0));
             gameManager->getSceneManager()->activateScene("stage");
-           // tipoJuego = 1;
-            //int factoryGameType = 1;
-             // return tipoJuego;
+            tipoJuego = 1;
+            
+              return tipoJuego;
             break;
         case MenuItem::StartPersonalizado:
      
             gameManager->getSceneManager()->addScene("stage", std::make_shared<StageScene>(gameManager, 1, 0));
             gameManager->getSceneManager()->activateScene("stage");
-          //  tipoJuego = 2;
-           // int factoryGameType = 2;
-             // return tipoJuego;
+            tipoJuego = 2;
+         
+              return tipoJuego;
             break;
         case MenuItem::StartRealista:
      
             gameManager->getSceneManager()->addScene("stage", std::make_shared<StageScene>(gameManager, 1, 0));
             gameManager->getSceneManager()->activateScene("stage");
-          //  tipoJuego = 3;
-           // int factoryGameType = 3;
-             // return tipoJuego;
+           tipoJuego = 3;
+           
+              return tipoJuego;
             break;
         case MenuItem::Exit:
             // stop gameManager loop
